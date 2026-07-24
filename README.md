@@ -25,6 +25,8 @@ exact command.
 
 ### BDD & Specification Styles
 
+- [Property-Based Tests](topics/property-based-tests/README.md)
+
 ### Non-Functional Testing
 
 ### Test Quality & Robustness Techniques
