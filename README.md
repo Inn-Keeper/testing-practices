@@ -21,6 +21,7 @@ exact command.
 - [System Tests](topics/system-tests/README.md)
 - [Smoke Tests](topics/smoke-tests/README.md)
 - [Regression Tests](topics/regression-tests/README.md)
+- [Acceptance Tests / UAT](topics/acceptance-tests/README.md)
 
 ### BDD & Specification Styles
 
