@@ -14,6 +14,7 @@ exact command.
 ### Test Levels by Scope
 
 - [Unit Tests](topics/unit-tests/README.md)
+- [Integration Tests](topics/integration-tests/README.md)
 
 ### BDD & Specification Styles
 
