@@ -20,6 +20,7 @@ exact command.
 - [E2E Tests](topics/e2e-tests/README.md)
 - [System Tests](topics/system-tests/README.md)
 - [Smoke Tests](topics/smoke-tests/README.md)
+- [Regression Tests](topics/regression-tests/README.md)
 
 ### BDD & Specification Styles
 
