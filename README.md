@@ -38,6 +38,7 @@ exact command.
 - [Chaos Engineering](topics/chaos-engineering/README.md)
 - [Accessibility Tests](topics/accessibility-tests/README.md)
 - [Load Tests](topics/load-tests/README.md)
+- [Stress Tests](topics/stress-tests/README.md)
 
 ### Test Quality & Robustness Techniques
 

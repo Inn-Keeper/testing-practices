@@ -8,6 +8,7 @@
     "test:cucumber": "NODE_OPTIONS=\"--import tsx\" cucumber-js --import 'topics/gherkin-bdd/**/*.steps.ts' 'topics/gherkin-bdd/features/**/*.feature'",
     "bench": "vitest bench",
     "loadtest": "tsx topics/load-tests/example.ts",
+    "stresstest": "tsx topics/stress-tests/example.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
