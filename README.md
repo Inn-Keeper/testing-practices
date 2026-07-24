@@ -41,6 +41,7 @@ exact command.
 - [Stress Tests](topics/stress-tests/README.md)
 - [Soak/Endurance Tests](topics/soak-tests/README.md)
 - [Compatibility Tests](topics/compatibility-tests/README.md)
+- [Usability Tests](topics/usability-tests/README.md)
 
 ### Test Quality & Robustness Techniques
 
