@@ -7,5 +7,8 @@ export default defineConfig({
     // shadow file alongside every real file; exclude them or Vitest treats
     // them as test files and fails on the binary content.
     exclude: ['**/node_modules/**', '**/._*'],
+    benchmark: {
+      exclude: ['**/node_modules/**', '**/._*'],
+    },
   },
 })

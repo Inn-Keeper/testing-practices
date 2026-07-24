@@ -32,6 +32,8 @@ exact command.
 
 ### Non-Functional Testing
 
+- [Performance Tests](topics/performance-tests/README.md)
+
 ### Test Quality & Robustness Techniques
 
 ### Approaches & Methodologies

@@ -6,6 +6,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cucumber": "NODE_OPTIONS=\"--import tsx\" cucumber-js --import 'topics/gherkin-bdd/**/*.steps.ts' 'topics/gherkin-bdd/features/**/*.feature'",
+    "bench": "vitest bench",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
