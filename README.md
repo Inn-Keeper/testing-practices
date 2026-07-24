@@ -17,6 +17,7 @@ exact command.
 - [Integration Tests](topics/integration-tests/README.md)
 - [Component Tests](topics/component-tests/README.md)
 - [Contract Tests](topics/contract-tests/README.md)
+- [E2E Tests](topics/e2e-tests/README.md)
 
 ### BDD & Specification Styles
 

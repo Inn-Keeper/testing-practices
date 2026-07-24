@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <input id="name" />
+    <button id="greet">Greet</button>
+    <p id="message"></p>
+    <script>
+      document.getElementById('greet').addEventListener('click', () => {
+        const name = document.getElementById('name').value || 'stranger'
+        document.getElementById('message').textContent = `Hello, ${name}!`
+      })
+    </script>
+  </body>
+</html>
