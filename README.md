@@ -27,6 +27,7 @@ exact command.
 
 - [Property-Based Tests](topics/property-based-tests/README.md)
 - [Snapshot Tests](topics/snapshot-tests/README.md)
+- [Approval/Golden-Master Tests](topics/approval-tests/README.md)
 
 ### Non-Functional Testing
 

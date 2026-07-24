@@ -1,0 +1,4 @@
+Region | Sales
+-------|------
+North | 120
+South | 95
