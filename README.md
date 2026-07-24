@@ -39,6 +39,7 @@ exact command.
 - [Accessibility Tests](topics/accessibility-tests/README.md)
 - [Load Tests](topics/load-tests/README.md)
 - [Stress Tests](topics/stress-tests/README.md)
+- [Soak/Endurance Tests](topics/soak-tests/README.md)
 
 ### Test Quality & Robustness Techniques
 
