@@ -19,6 +19,7 @@ exact command.
 - [Contract Tests](topics/contract-tests/README.md)
 - [E2E Tests](topics/e2e-tests/README.md)
 - [System Tests](topics/system-tests/README.md)
+- [Smoke Tests](topics/smoke-tests/README.md)
 
 ### BDD & Specification Styles
 
