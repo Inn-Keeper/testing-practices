@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <button id="open">Open dialog</button>
+    <dialog id="dialog">
+      <p>Native dialog content</p>
+      <button id="close">Close</button>
+    </dialog>
+    <script>
+      document.getElementById('open').addEventListener('click', () => {
+        document.getElementById('dialog').showModal()
+      })
+      document.getElementById('close').addEventListener('click', () => {
+        document.getElementById('dialog').close()
+      })
+    </script>
+  </body>
+</html>

@@ -40,6 +40,7 @@ exact command.
 - [Load Tests](topics/load-tests/README.md)
 - [Stress Tests](topics/stress-tests/README.md)
 - [Soak/Endurance Tests](topics/soak-tests/README.md)
+- [Compatibility Tests](topics/compatibility-tests/README.md)
 
 ### Test Quality & Robustness Techniques
 
