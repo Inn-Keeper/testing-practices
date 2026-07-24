@@ -33,6 +33,7 @@ exact command.
 ### Non-Functional Testing
 
 - [Performance Tests](topics/performance-tests/README.md)
+- [Localization/i18n Tests](topics/localization-tests/README.md)
 
 ### Test Quality & Robustness Techniques
 
