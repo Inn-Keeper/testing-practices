@@ -35,6 +35,7 @@ exact command.
 - [Performance Tests](topics/performance-tests/README.md)
 - [Localization/i18n Tests](topics/localization-tests/README.md)
 - [Security Tests](topics/security-tests/README.md)
+- [Chaos Engineering](topics/chaos-engineering/README.md)
 
 ### Test Quality & Robustness Techniques
 
