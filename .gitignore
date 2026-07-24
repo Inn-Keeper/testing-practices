@@ -1,0 +1,9 @@
+# macOS metadata files
+._*
+.DS_Store
+
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
