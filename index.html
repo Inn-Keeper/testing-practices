@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing Types & Quality Metrics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+        
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-left: 4px solid #0066cc;
+            padding-left: 1rem;
+        }
+        
+        h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+        
+        li:before {
+            content: "▸";
+            color: #0066cc;
+            position: absolute;
+            left: -1rem;
+            font-weight: bold;
+        }
+        
+        .definition {
+            color: #666;
+            font-size: 0.95rem;
+            margin-left: 0.5rem;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 1.2rem;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        
+        .card ul {
+            padding-left: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .card li {
+            margin-bottom: 0.4rem;
+        }
+        
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .metrics-table th {
+            background: #0066cc;
+            color: white;
+            padding: 0.8rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .metrics-table td {
+            padding: 0.8rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .metrics-table tr:hover {
+            background: #f9fafb;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .toc {
+            background: #f0f4f8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+        }
+        
+        .toc ul {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        .toc a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Software Testing Types & Quality Metrics</h1>
+            <p class="subtitle">A comprehensive guide to testing strategies, procedures, and quality assessment</p>
+        </header>
+        
+        <div class="toc">
+            <h2>Quick Navigation</h2>
+            <ul>
+                <li><a href="#test-levels">Test Levels</a></li>
+                <li><a href="#bdd">BDD & Behavior</a></li>
+                <li><a href="#nonfunctional">Non-Functional</a></li>
+                <li><a href="#quality">Quality Techniques</a></li>
+                <li><a href="#methodologies">Methodologies</a></li>
+                <li><a href="#qa-procedures">QA Procedures</a></li>
+                <li><a href="#metrics">Quality Metrics</a></li>
+            </ul>
+        </div>
+        
+        <!-- Test Levels by Scope -->
+        <section id="test-levels">
+            <h2>Test Levels by Scope</h2>
+            <div class="category-grid">
+                <div class="card">
+                    <h3>Unit Tests</h3>
+                    <p class="definition">Test individual functions/classes in isolation using tools like Jest, Vitest, Catch2, or JUnit.</p>
+                </div>
+                <div class="card">
+                    <h3>Integration Tests</h3>
+                    <p class="definition">Verify multiple modules or services work together (database + API interactions).</p>
+                </div>
+                <div class="card">
+                    <h3>Component Tests</h3>
+                    <p class="definition">UI components tested in isolation using React Testing Library or Storybook interaction tests.</p>
+                </div>
+                <div class="card">
+                    <h3>Contract Tests</h3>
+                    <p class="definition">Verify API producer/consumer agreements using tools like Pact.</p>
+                </div>
+                <div class="card">
+                    <h3>End-to-End (E2E) Tests</h3>
+                    <p class="definition">Full user flows through the real system using Playwright or Cypress.</p>
+                </div>
+                <div class="card">
+                    <h3>System Tests</h3>
+                    <p class="definition">Test the entire application as a whole in a production-like environment.</p>
+                </div>
+                <div class="card">
+                    <h3>Smoke Tests</h3>
+                    <p class="definition">Quick sanity checks that the build basically works before deeper testing.</p>
+                </div>
+                <div class="card">
+                    <h3>Regression Tests</h3>
+                    <p class="definition">Re-run test suites to catch previously fixed bugs reappearing.</p>
+                </div>
+                <div class="card">
+                    <h3>Acceptance Tests / UAT</h3>
+                    <p class="definition">Validate against business requirements, often performed by stakeholders.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BDD & Specification -->
+        <section id="bdd">
+            <h2>Behavior-Driven & Specification Styles</h2>
+            <ul>
+                <li><strong>Gherkin/BDD Tests</strong><span class="definition">– Given/When/Then scenarios using Cucumber, SpecFlow, or Behave</span></li>
+                <li><strong>Property-Based Tests</strong><span class="definition">– Generate random inputs to test invariants (QuickCheck, fast-check, Hypothesis)</span></li>
+                <li><strong>Snapshot Tests</strong><span class="definition">– Compare output against stored references (UI markup, serialized data)</span></li>
+                <li><strong>Approval/Golden-Master Tests</strong><span class="definition">– Human-approved baseline outputs for legacy code</span></li>
+            </ul>
+        </section>
+        
+        <!-- Non-Functional Testing -->
+        <section id="nonfunctional">
+            <h2>Non-Functional Testing</h2>
+            <div class="category-grid">
+                <div class="card">
+                    <h3>Performance Tests</h3>
+                    <p class="definition">Measure response times and throughput under normal conditions.</p>
+                </div>
+                <div class="card">
+                    <h3>Load Tests</h3>
+                    <p class="definition">Evaluate behavior under expected traffic using k6, Gatling, or JMeter.</p>
+                </div>
+                <div class="card">
+                    <h3>Stress Tests</h3>
+                    <p class="definition">Push systems beyond capacity to identify breaking points.</p>
+                </div>
+                <div class="card">
+                    <h3>Soak/Endurance Tests</h3>
+                    <p class="definition">Long-running load scenarios to detect memory leaks and degradation.</p>
+                </div>
+                <div class="card">
+                    <h3>Security Tests</h3>
+                    <p class="definition">SAST, DAST, dependency scanning, and penetration testing.</p>
+                </div>
+                <div class="card">
+                    <h3>Accessibility Tests</h3>
+                    <p class="definition">Validate WCAG/EN 301 549 compliance using axe-core, Pa11y, or manual screen-reader testing.</p>
+                </div>
+                <div class="card">
+                    <h3>Usability Tests</h3>
+                    <p class="definition">Watch real users perform tasks to identify UX friction.</p>
+                </div>
+                <div class="card">
+                    <h3>Compatibility Tests</h3>
+                    <p class="definition">Verify functionality across browsers, devices, and operating systems.</p>
+                </div>
+                <div class="card">
+                    <h3>Localization/i18n Tests</h3>
+                    <p class="definition">Validate translations, RTL layouts, and date/currency formats.</p>
+                </div>
+                <div class="card">
+                    <h3>Chaos Engineering</h3>
+                    <p class="definition">Inject failures in production-like systems to test resilience.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quality Techniques -->
+        <section id="quality">
+            <h2>Test Quality & Robustness Techniques</h2>
+            <ul>
+                <li><strong>Mutation Testing</strong><span class="definition">– Introduce code mutations to verify tests actually catch bugs (Stryker, PIT)</span></li>
+                <li><strong>Fuzz Testing</strong><span class="definition">– Feed malformed/random input to find crashes and vulnerabilities</span></li>
+                <li><strong>Flaky Test Detection</strong><span class="definition">– Identify non-deterministic tests through repeated runs</span></li>
+                <li><strong>Visual Regression Testing</strong><span class="definition">– Pixel/DOM diffing of UI changes (Percy, Chromatic, Playwright screenshots)</span></li>
+            </ul>
+        </section>
+        
+        <!-- Methodologies -->
+        <section id="methodologies">
+            <h2>Approaches & Methodologies</h2>
+            <ul>
+                <li><strong>TDD (Test-Driven Development)</strong><span class="definition">– Write tests first, then implement code to pass</span></li>
+                <li><strong>BDD (Behavior-Driven Development)</strong><span class="definition">– Define behavior with stakeholders before implementation</span></li>
+                <li><strong>ATDD (Acceptance Test-Driven Development)</strong><span class="definition">– Acceptance criteria drive development decisions</span></li>
+                <li><strong>Exploratory Testing</strong><span class="definition">– Unscripted, experience-driven manual investigation</span></li>
+                <li><strong>Risk-Based Testing</strong><span class="definition">– Prioritize test effort by likelihood and impact of failure</span></li>
+                <li><strong>Shift-Left Testing</strong><span class="definition">– Move testing earlier in the development lifecycle</span></li>
+            </ul>
+        </section>
+        
+        <!-- QA Procedures -->
+        <section id="qa-procedures">
+            <h2>QA Procedures & Processes</h2>
+            <ul>
+                <li><strong>Test Planning</strong><span class="definition">– Define scope, strategy, resources, and schedule</span></li>
+                <li><strong>Test Case Design</strong><span class="definition">– Use equivalence partitioning, boundary value analysis, decision tables, state transitions</span></li>
+                <li><strong>Code Review / Peer Review</strong><span class="definition">– Manual inspection of code before merge</span></li>
+                <li><strong>Static Analysis & Linting</strong><span class="definition">– Automated code checks using ESLint, SonarQube, etc.</span></li>
+                <li><strong>Defect Triage</strong><span class="definition">– Prioritize and assign bugs for resolution</span></li>
+                <li><strong>Release/Regression Checklists</strong><span class="definition">– Gated sign-off procedures before deployment</span></li>
+                <li><strong>Traceability Matrix</strong><span class="definition">– Map requirements to test cases for coverage</span></li>
+                <li><strong>Canary Releases & Feature Flags</strong><span class="definition">– Gradual rollout as testing-in-production</span></li>
+                <li><strong>Post-Incident Reviews</strong><span class="definition">– Blameless postmortems to learn from production failures</span></li>
+            </ul>
+        </section>
+        
+        <!-- Quality Metrics -->
+        <section id="metrics">
+            <h2>Quality Metrics</h2>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Test Coverage</strong></td>
+                        <td>Line, branch, function, or statement coverage (aim for meaningful coverage, not just high numbers)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mutation Score</strong></td>
+                        <td>Percentage of code mutations killed by your test suite</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Defect Density</strong></td>
+                        <td>Bugs found per thousand lines of code (KLOC) or per feature</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Defect Escape Rate</strong></td>
+                        <td>Percentage of bugs found in production vs. caught in testing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MTTR / MTBF</strong></td>
+                        <td>Mean Time To Repair / Mean Time Between Failures</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flakiness Rate</strong></td>
+                        <td>Percentage of test runs failing non-deterministically</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Test Execution Time</strong></td>
+                        <td>Total suite duration (impacts CI feedback loops)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cyclomatic Complexity</strong></td>
+                        <td>Code complexity as a proxy for testability and maintainability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Code Churn</strong></td>
+                        <td>Frequently changed files often correlate with defects</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DORA Metrics</strong></td>
+                        <td>Deployment frequency, lead time, change failure rate, MTTR</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <footer>
+            <p>Software Testing Types & Quality Metrics Reference Guide</p>
+            <p>Created: <span id="date"></span></p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
