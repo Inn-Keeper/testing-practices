@@ -26,6 +26,7 @@ exact command.
 ### BDD & Specification Styles
 
 - [Property-Based Tests](topics/property-based-tests/README.md)
+- [Snapshot Tests](topics/snapshot-tests/README.md)
 
 ### Non-Functional Testing
 

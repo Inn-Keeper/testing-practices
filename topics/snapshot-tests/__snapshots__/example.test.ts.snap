@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderInvoiceSummary > renders a stable, human-readable summary 1`] = `
+"Invoice INV-1
+  Widget: $9.99
+  Gadget: $19.99
+Total: $29.98"
+`;
