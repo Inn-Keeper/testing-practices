@@ -46,6 +46,7 @@ exact command.
 ### Test Quality & Robustness Techniques
 
 - [Mutation Testing](topics/mutation-testing/README.md)
+- [Fuzz Testing](topics/fuzz-testing/README.md)
 
 ### Approaches & Methodologies
 
