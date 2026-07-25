@@ -35,12 +35,18 @@ importers:
       axe-core:
         specifier: ^4.12.1
         version: 4.12.1
+      esbuild:
+        specifier: ^0.28.1
+        version: 0.28.1
       fast-check:
         specifier: ^4.9.0
         version: 4.9.0
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1
+      kaplay:
+        specifier: ^3001.0.19
+        version: 3001.0.19
       tsx:
         specifier: ^4.23.1
         version: 4.23.1
@@ -1342,6 +1348,10 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
+
+  kaplay@3001.0.19:
+    resolution: {integrity: sha512-T8GdXGXvgv/vbYVA1lcHzuDNVhp3juOJJE8OZs0vR5MdGNElBvANEeTSnqAAhJpSXtNxpeNy29pqkok3RnXKtg==}
+    engines: {node: '>=20.0.0'}
 
   knuth-shuffle-seeded@1.0.6:
     resolution: {integrity: sha512-9pFH0SplrfyKyojCLxZfMcvkhf5hH0d+UwR9nTVJ/DDQJGuzcXjTwB7TP7sDfehSudlGGaOLblmEWqv04ERVWg==}
@@ -3271,6 +3281,8 @@ snapshots:
   json-schema-traverse@1.0.0: {}
 
   json5@2.2.3: {}
+
+  kaplay@3001.0.19: {}
 
   knuth-shuffle-seeded@1.0.6:
     dependencies:
