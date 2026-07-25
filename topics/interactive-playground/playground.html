@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Playground — escapeHtml()</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem;
+    }
+    h1 { font-size: 1.6rem; color: #0066cc; margin-bottom: 0.5rem; }
+    .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: #0052a3; }
+    canvas {
+      display: block;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+    .output h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #666;
+      margin-top: 1rem;
+    }
+    pre {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 0.75rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-family: ui-monospace, monospace;
+      font-size: 0.9rem;
+    }
+    #playground-verdict { font-weight: 600; margin-top: 0.5rem; }
+    footer { margin-top: 2rem; }
+    footer a { color: #0066cc; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Playground: escapeHtml()</h1>
+    <p class="subtitle">
+      Type anything — including an XSS payload — click "Run test," and watch
+      <code>escapeHtml()</code> (the same function covered by
+      <a href="../security-tests/README.md">Security Tests</a>) neutralize
+      it live, in the browser, against whatever you throw at it.
+    </p>
+
+    <label for="playground-input">Try an adversarial input</label>
+    <input type="text" id="playground-input" value="&lt;script&gt;alert(1)&lt;/script&gt;">
+    <button id="playground-run" type="button">Run test</button>
+
+    <canvas id="playground-canvas"></canvas>
+
+    <div class="output">
+      <h2>Raw input</h2>
+      <pre id="playground-raw">—</pre>
+      <h2>Escaped output</h2>
+      <pre id="playground-escaped">—</pre>
+      <p id="playground-verdict">—</p>
+    </div>
+
+    <footer>
+      <a href="../../index.html">&larr; Back to overview</a>
+    </footer>
+  </div>
+
+  <script src="./dist/playground.bundle.js"></script>
+</body>
+</html>

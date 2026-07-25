@@ -7,3 +7,10 @@ dist/
 coverage/
 test-results/
 playwright-report/
+.stryker-tmp/
+
+# interactive-playground's bundle is committed on purpose (no build step
+# in Vercel's static deploy) — see topics/interactive-playground/README.md
+!topics/interactive-playground/dist/
+!topics/interactive-playground/dist/*
+topics/interactive-playground/dist/._*
