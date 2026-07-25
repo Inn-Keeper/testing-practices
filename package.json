@@ -10,11 +10,14 @@
     "loadtest": "tsx topics/load-tests/example.ts",
     "stresstest": "tsx topics/stress-tests/example.ts",
     "soaktest": "tsx topics/soak-tests/example.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "mutationtest": "stryker run"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^13.2.0",
     "@playwright/test": "^1.61.1",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/vitest-runner": "^9.6.1",
     "@testing-library/dom": "^10.4.1",
     "@types/autocannon": "^7.12.7",
     "@types/node": "^26.1.1",
