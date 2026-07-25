@@ -9,6 +9,14 @@ Run the Vitest-based examples: `pnpm test`. Some topics use their own
 runner (Playwright, Cucumber, Stryker) — see that topic's README for the
 exact command.
 
+## Interactive Demo
+
+- [Interactive Playground](topics/interactive-playground/README.md) — type
+  adversarial input into a live page and watch the tested `escapeHtml()`
+  function neutralize it in real time (open
+  `topics/interactive-playground/playground.html` directly, no server
+  needed).
+
 ## Topics
 
 ### Test Levels by Scope
