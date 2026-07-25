@@ -47,6 +47,7 @@ exact command.
 
 - [Mutation Testing](topics/mutation-testing/README.md)
 - [Fuzz Testing](topics/fuzz-testing/README.md)
+- [Flaky Test Detection](topics/flaky-test-detection/README.md)
 
 ### Approaches & Methodologies
 
